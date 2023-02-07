@@ -3,15 +3,15 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry: {
-    index:'./src/index.js'
+    index: './src/index.js',
   },
-  mode:'development',
-  devServer:{
-    static:'./dist'
+  mode: 'development',
+  devServer: {
+    static: './dist',
   },
   plugins: [
-        new HtmlWebpackPlugin({
-        template:"./src/index.html"
+    new HtmlWebpackPlugin({
+      template: './src/index.html',
     }),
   ],
   output: {
@@ -20,16 +20,16 @@ module.exports = {
     clean: true,
   },
 
-   module: {
-     rules: [
-       {
-         test: /\.css$/i,
-         use: ['style-loader', 'css-loader'],
-       },
+  module: {
+    rules: [
+      {
+        test: /\.css$/i,
+        use: ['style-loader', 'css-loader'],
+      },
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
         type: 'asset/resource',
       },
-     ],
-   },
+    ],
+  },
 };
