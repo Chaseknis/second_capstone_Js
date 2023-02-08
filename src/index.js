@@ -30,7 +30,14 @@ const insertToDom = async () => {
   });
 };
 insertToDom();
-
+const comment = ()=>{
+    const comments = document.querySelectorAll(".buttons_Wrapper")
+    comments.forEach((element)=>{
+    element.addEventListener("click",()=>{
+        popup(element)
+    })
+    })
+}
 const popup = async(element)=>{
     console.log(element)
     const id = element.getAttribute("id")
