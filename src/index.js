@@ -11,7 +11,10 @@ const populateUI = (data) => {
     <div class="poster_wrapper">
         <img src=${data.image.medium} alt="">
         <div class="details_wrapper">
-          <p>${data.name} <span>HD</span></p>
+          <div class="paragraph_container">
+            <p>${data.name}</p>
+            <span>HD</span>
+          </div>
           <div id=${data.id} class="likewrap">
               <img class="heart" src="https://img.icons8.com/color/48/ffffff/hearts.png"/>
           </div>

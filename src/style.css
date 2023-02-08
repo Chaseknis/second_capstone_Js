@@ -11,7 +11,6 @@ body {
 
 header {
   width: 100%;
-  height: 60px;
   padding: 0 20px;
   background-color: rgb(32, 26, 33);
   position: fixed;
@@ -35,7 +34,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: 16pt;
+  padding: 1rem 0;
 }
 
 ul {
@@ -50,7 +49,8 @@ ul li {
   align-items: center;
   justify-content: center;
   list-style: none;
-  background-color: rgb(95, 9, 49);
+  border: 1px solid white;
+  background-color: transparent;
   padding: 3px 10px;
 }
 
@@ -107,13 +107,23 @@ ul li a {
   padding-top: 1rem;
 }
 
+.paragraph_container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
 .details_wrapper p {
+  width: 85%;
+  height: 16px;
   font-size: 12px;
   font-weight: 600;
   color: white;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-.details_wrapper p span {
+.details_wrapper span {
   font-size: 10px;
   font-weight: 600;
   color: brown;
@@ -127,10 +137,13 @@ ul li a {
 
 button {
   width: 100%;
+  font-size: 10px;
+  font-weight: 600;
   padding: 4px 12px;
   background-image: linear-gradient(-25deg, rgb(95, 9, 49) 0%, rgb(95, 9, 49) 100%);
   color: white;
   border: none;
+  letter-spacing: 1px;
 }
 
 .likewrap {
@@ -151,6 +164,10 @@ footer {
 }
 
 @media only screen and (min-width: 768px) {
+  header {
+    padding: 0 10%;
+  }
+
   nav {
     display: flex;
     align-items: center;
@@ -158,19 +175,24 @@ footer {
     justify-content: space-between;
   }
 
+  .logo {
+    font-size: 30px;
+  }
+
+  .logo span {
+    font-size: 30px;
+  }
+
   ul {
-    display: flex;
-    align-items: center;
-    gap: 50px;
-    margin-right: 25px;
+    gap: 20px;
   }
 
-  ul li {
-    list-style: none;
+  ul li a {
+    font-size: 16px;
   }
 
-  a {
-    text-decoration: none;
+  .movie_wrapper {
+    padding: 10px;
   }
 
   .movies_container {
@@ -189,10 +211,13 @@ footer {
   }
 
   .details_wrapper {
-    display: flex;
+    padding-top: 0;
+  }
+
+  .details_wrapper p {
     width: 100%;
-    justify-content: space-between;
-    align-items: center;
+    font-size: 14px;
+    padding-right: 5px;
   }
 
   img {
@@ -208,21 +233,21 @@ footer {
     cursor: pointer;
   }
 
+  .poster_wrapper {
+    padding-bottom: 0;
+  }
+
   .likewrap {
+    width: 35px;
     display: flex;
     align-items: center;
-    height: 30px;
     background-color: rgb(20, 12, 12);
     border-radius: 5px;
     margin: 10px;
-    padding: 0 10px;
+    padding: 2px 5px;
     color: white;
     font-weight: 600;
     cursor: pointer;
-  }
-
-  .heart {
-    height: 25px;
   }
 
   .popup {
@@ -264,5 +289,23 @@ footer {
     margin-right: auto;
     justify-content: space-between;
     margin-top: 10px;
+  }
+
+  button {
+    font-size: 12px;
+    padding: 4px 12px;
+  }
+
+  footer {
+    background-color: black;
+  }
+
+  .footer_contents {
+    padding: 2rem 150px;
+  }
+
+  .footer_contents p {
+    color: aliceblue;
+    font-size: 16px;
   }
 }
