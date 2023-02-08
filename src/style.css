@@ -201,4 +201,18 @@
     justify-content: space-between;
     margin-top: 10px;
   }
+
+  .commentsform {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .commentinput {
+    height: 50px;
+  }
+
+  .likes {
+    display: flex;
+    align-items: center;
+  }
 }

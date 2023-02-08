@@ -27,8 +27,8 @@ const insertToDom = async () => {
   results = await results.json();
   results.forEach((element) => {
     container.appendChild(populateUI(element));
-    comment()
   });
+  comment()
 };
 insertToDom();
 const comment = ()=>{
@@ -49,5 +49,6 @@ const popup = async(element)=>{
     document.querySelector(".image-arrow").addEventListener("click",()=>{
         document.querySelector(".popup").style.display="none" 
     })
+    document.querySelector(".moviename").innerText=results.name
 
 }
