@@ -11,8 +11,10 @@ const populateUI = (data) => {
     <div class="poster_wrapper">
         <img src=${data.image.medium} alt="">
         <div class="details_wrapper">
-        <p>${data.name}</p>
-        <div id=${data.id} class="likewrap"><img class="heart" src="https://img.icons8.com/color/48/ffffff/hearts.png"/></div>
+          <p>${data.name} <span>HD</span></p>
+          <div id=${data.id} class="likewrap">
+              <img class="heart" src="https://img.icons8.com/color/48/ffffff/hearts.png"/>
+          </div>
         </div>
     </div>
     <div class="buttons_wrapper" id=${data.id}>
@@ -41,7 +43,6 @@ const comment = () => {
     });
   });
 };
-
 const insertToDom = async () => {
   let results = await fetch('https://api.tvmaze.com/shows');
   results = await results.json();
