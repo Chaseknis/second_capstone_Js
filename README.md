@@ -81,7 +81,7 @@
 ## 🚀 Live Demo <a name="live-demo"></a>
 
 
-- [Live Demo Link](https://chaseknis.github.io/leaderboard/dist/)
+- [Live Demo Link](https://chaseknis.github.io/second_capstone_Js/dist/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
