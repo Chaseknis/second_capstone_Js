@@ -15,7 +15,7 @@ const populateUI = (data) => {
         <div id=${data.id} class="likewrap"><img class="heart" src="https://img.icons8.com/color/48/ffffff/hearts.png"/></div>
         </div>
     </div>
-    <div class="buttons_Wrapper" id=${data.id}>
+    <div class="buttons_wrapper" id=${data.id}>
         <button id=${data.id} class="comment">Comments</button>
     </div>
     `;
@@ -34,7 +34,7 @@ const popup = async (element) => {
   document.querySelector('.moviename').innerText = results.name;
 };
 const comment = () => {
-  const comments = document.querySelectorAll('.buttons_Wrapper');
+  const comments = document.querySelectorAll('.buttons_wrapper');
   comments.forEach((element) => {
     element.addEventListener('click', () => {
       popup(element);
