@@ -30,3 +30,18 @@ const insertToDom = async () => {
   });
 };
 insertToDom();
+
+const popup = async(element)=>{
+    console.log(element)
+    const id = element.getAttribute("id")
+    let results = await fetch(`https://api.tvmaze.com/shows/${id}`)
+    results = await results.json()
+
+    getLikesComments(id)
+    document.querySelector(".popup").style.display="flex"
+    document.querySelector(".displayimg").setAttribute("src",results.image.medium)
+    document.querySelector(".image-arrow").addEventListener("click",()=>{
+        document.querySelector(".popup").style.display="none" 
+    })
+
+}
