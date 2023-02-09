@@ -50,7 +50,7 @@ ul {
   gap: 8px;
 }
 
-ul li {
+nav ul li {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -60,7 +60,7 @@ ul li {
   padding: 3px 10px;
 }
 
-ul li a {
+nav ul li a {
   font-size: 12px;
   color: white;
 }
@@ -168,6 +168,151 @@ footer {
   font-size: 12px;
 }
 
+.popup {
+  position: fixed;
+  display: none;
+  width: 100%;
+  justify-content: center;
+  top: 40px;
+}
+
+.semi-popup {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 1rem;
+  background-color: #201a21;
+}
+
+.image-arrow {
+  height: 20px;
+  width: 20px;
+  background-color: #5f0931;
+  align-self: flex-end;
+}
+
+.pop_up_image_wrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #5f0931;
+  padding: 5px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0 2px 5px -1px, rgba(0, 0, 0, 0.3) 0 1px 3px -1px;
+}
+
+.displayimg img {
+  object-fit: cover;
+}
+
+.moviescontainerdetails {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.moviescontainerdetails p {
+  color: aliceblue;
+  font-size: 12px;
+  font-weight: 600;
+
+}
+
+.likes {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.likes .heart {
+  width: 20px;
+  padding-left: 5px;
+}
+
+.comments_wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding-top: 0.5rem;
+}
+
+.comments_wrapper p {
+  font-size: 20px;
+  font-weight: 600;
+  color: aliceblue;
+}
+
+.commentslist {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.commentslist ul {
+  width: 100%;
+  max-height: 60px;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.commentslist ul li {
+  width: 100%;
+  background-color: aliceblue;
+  color: #201a21;
+  text-align: left;
+  padding: 6px 12px;
+  font-size: 12px;
+  font-weight: 600;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.comments_wrapper form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding-top: 1rem;
+}
+
+.comments_wrapper form input,
+textarea {
+  padding: 6px 12px;
+}
+
+.comments_wrapper button {
+  width: 100%;
+  font-size: 10px;
+  font-weight: 600;
+  padding: 6px 12px;
+  background-image: linear-gradient(-25deg, rgb(95, 9, 49) 0%, rgb(95, 9, 49) 100%);
+  color: white;
+  border: none;
+  letter-spacing: 1px;
+}
+
+footer {
+  background-color: black;
+}
+
+.footer_contents {
+  padding: 2rem 150px;
+}
+
+.footer_contents p {
+  color: aliceblue;
+  font-size: 16px;
+}
+
 @media only screen and (min-width: 768px) {
   header {
     padding: 0 10%;
@@ -254,22 +399,14 @@ footer {
   }
 
   .popup {
-    position: fixed;
-    display: none;
-    width: 100%;
-    height: 100%;
-    justify-content: center;
+    top: 80px;
   }
 
   .semi-popup {
-    width: 70%;
-    height: 90%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: #201a21;
+    width: 80%;
+    height: 90vh;
   }
+
 
   .displayimg {
     width: 70%;
@@ -278,18 +415,30 @@ footer {
   }
 
   .image-arrow {
-    height: 20px;
-    width: 20px;
-    margin-left: auto;
-    margin-right: 10px;
-    margin-top: 2px;
+    height: 40px;
+    width: 40px;
+    background-color: #5f0931;
+    align-self: flex-end;
+  }
+
+  .pop_up_image_wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: #5f0931;
+    padding: 5px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0 2px 5px -1px, rgba(0, 0, 0, 0.3) 0 1px 3px -1px;
+  }
+  
+  .displayimg img {
+    object-fit: contain;
   }
 
   .moviescontainerdetails {
+    width: 100%;
     display: flex;
-    width: 70%;
-    margin-left: auto;
-    margin-right: auto;
+    flex-direction: row;
     justify-content: space-between;
     margin-top: 10px;
   }

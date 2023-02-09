@@ -27,6 +27,7 @@ const populateUI = (data) => {
   maindiv.appendChild(div);
   return maindiv;
 };
+
 const popup = async (element) => {
   const id = element.getAttribute('id');
   let results = await fetch(`https://api.tvmaze.com/shows/${id}`);
@@ -38,6 +39,7 @@ const popup = async (element) => {
   });
   document.querySelector('.moviename').innerText = results.name;
 };
+
 const comment = () => {
   const comments = document.querySelectorAll('.buttons_wrapper');
   comments.forEach((element) => {
@@ -46,6 +48,7 @@ const comment = () => {
     });
   });
 };
+
 const insertToDom = async () => {
   let results = await fetch('https://api.tvmaze.com/shows');
   results = await results.json();
