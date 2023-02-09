@@ -65,10 +65,6 @@ nav ul li a {
   color: white;
 }
 
-.semi-popup {
-  display: none;
-}
-
 .movies_container {
   width: 100%;
   padding: 0 20px;
@@ -155,19 +151,6 @@ button {
   width: 18px;
 }
 
-footer {
-  background-color: black;
-}
-
-.footer_contents {
-  padding: 1rem 20px;
-}
-
-.footer_contents p {
-  color: aliceblue;
-  font-size: 12px;
-}
-
 .popup {
   position: fixed;
   display: none;
@@ -219,7 +202,6 @@ footer {
   color: aliceblue;
   font-size: 12px;
   font-weight: 600;
-
 }
 
 .likes {
@@ -407,7 +389,6 @@ footer {
     height: 90vh;
   }
 
-
   .displayimg {
     width: 70%;
     height: 50%;
@@ -430,7 +411,7 @@ footer {
     padding: 5px;
     box-shadow: rgba(50, 50, 93, 0.25) 0 2px 5px -1px, rgba(0, 0, 0, 0.3) 0 1px 3px -1px;
   }
-  
+
   .displayimg img {
     object-fit: contain;
   }
