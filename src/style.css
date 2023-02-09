@@ -248,9 +248,8 @@ footer {
     align-items: center;
     background-color: rgb(20, 12, 12);
     border-radius: 5px;
-    margin: 10px;
+    margin: 10px 0;
     padding: 2px 5px;
-    color: white;
     cursor: pointer;
   }
 
