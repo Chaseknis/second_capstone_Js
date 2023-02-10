@@ -81,9 +81,9 @@ const insertToDom = async () => {
 };
 insertToDom();
 
-document.querySelector('.commentsform').addEventListener('submit', (e) => {
+document.querySelector('.comments_form').addEventListener('submit', (e) => {
   e.preventDefault();
   const name = document.querySelector('.commenter').value;
-  const comment = document.querySelector('.commentinput').value;
+  const comment = document.querySelector('.comment_input').value;
   postComment(name, comment);
 });

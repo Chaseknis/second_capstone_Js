@@ -63,7 +63,7 @@ small {
   text-align: center;
 }
 
-.moviescontainerdetails span {
+.movies_container_details span {
   color: white;
 }
 
@@ -179,10 +179,6 @@ button {
   letter-spacing: 1px;
 }
 
-.likes_wrap {
-  width: 18px;
-}
-
 .popup {
   position: fixed;
   display: none;
@@ -218,6 +214,37 @@ button {
   box-shadow: rgba(50, 50, 93, 0.25) 0 2px 5px -1px, rgba(0, 0, 0, 0.3) 0 1px 3px -1px;
 }
 
+.pop_up_image_wrapper .likes_wrap {
+  width: 100%;
+  font-size: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.pop_up_image_wrapper .likes_wrap span {
+  border: none;
+  color: white;
+  padding-left: 5px;
+}
+
+.likes_wrap .comment {
+  width: 100%;
+  font-size: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.likes_wrap .comment p {
+  border: none;
+  color: white;
+  padding-left: 5px;
+  font-size: 10px;
+}
+
 .pup_up_contents_wrapper {
   width: 100%;
   display: flex;
@@ -230,7 +257,7 @@ button {
   object-fit: cover;
 }
 
-.moviescontainerdetails {
+.movies_container_details {
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -238,7 +265,7 @@ button {
   margin-top: 10px;
 }
 
-.moviescontainerdetails p {
+.movies_container_details p {
   color: aliceblue;
   font-size: 12px;
   font-weight: 600;
@@ -249,6 +276,20 @@ button {
   flex-direction: row;
   align-items: flex-start;
   justify-content: space-between;
+  gap: 5px;
+}
+
+.likes_wrap {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.likes_wrap span {
+  border: none;
+  color: white;
+  padding-left: 5px;
 }
 
 .likes .heart {
@@ -419,7 +460,7 @@ footer {
 
   .comment {
     width: 100%;
-    background-color: black;
+    background-color: transparent;
     color: white;
     height: 35px;
     border: 0 solid red;
@@ -434,7 +475,7 @@ footer {
     width: 35px;
     display: flex;
     align-items: center;
-    background-color: rgb(20, 12, 12);
+    background-color: transparent;
     border-radius: 5px;
     margin: 10px 0;
     padding: 2px 5px;
@@ -485,12 +526,16 @@ footer {
     object-fit: contain;
   }
 
-  .moviescontainerdetails {
+  .movies_container_details {
     width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     margin-top: 10px;
+  }
+  .comments_list {
+    width: 100%;
+    scroll-behavior: auto;
   }
 
   .comments_list ul {
@@ -499,6 +544,25 @@ footer {
     display: flex;
     flex-direction: column;
     overflow-y: auto;
+  }
+
+  .line {
+    width: 80%;
+    background-color: #5f0931;
+    border: 1px solid #5f0931;
+    margin: 2rem 0;
+    align-self: center;
+  }
+  
+  
+
+  .comments_list ul li {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+
   }
 
   button {

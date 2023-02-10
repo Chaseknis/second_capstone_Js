@@ -19,4 +19,3 @@ describe('commentCounter', () => {
     expect(result).toBe(0);
   });
 });
-

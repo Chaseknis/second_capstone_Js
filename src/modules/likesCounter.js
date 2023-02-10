@@ -1,7 +1,7 @@
 const getAllLikes = async () => {
   try {
-    const appkey = localStorage.getItem('apiKey');
-    const url = `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/${appkey}/likes/`;
+    const appKey = localStorage.getItem('apiKey');
+    const url = `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/${appKey}/likes/`;
     const likes = await fetch(url);
     return await likes.json();
   } catch (error) {
@@ -10,8 +10,8 @@ const getAllLikes = async () => {
 };
 
 const addLike = async (id) => {
-  const appkey = localStorage.getItem('apiKey');
-  const url = `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/${appkey}/likes/`;
+  const appKey = localStorage.getItem('apiKey');
+  const url = `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/${appKey}/likes/`;
   const rawResponse = await fetch(url, {
     method: 'POST',
     headers: {

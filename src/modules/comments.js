@@ -1,7 +1,7 @@
 const fetchComments = async () => {
   const id = localStorage.getItem('id');
-  const appkey = localStorage.getItem('apiKey');
-  const url = `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/${appkey}/comments?item_id=${id}`;
+  const appKey = localStorage.getItem('apiKey');
+  const url = `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/${appKey}/comments?item_id=${id}`;
   let rawResponse = await fetch(url);
   rawResponse = await rawResponse.json();
   return rawResponse;
@@ -15,9 +15,10 @@ const getComments = async () => {
   rawResponse.forEach((res) => {
     const li = document.createElement('li');
     li.innerHTML = `
-    <p>${res.username}</p>
-    <p>${res.comment}</p>
-    <p>${res.creation_date}</p>
+    <p><span>Date:</span>${res.creation_date}</p>
+    <p><span>User Name:</span> ${res.username}</p>
+    <p><span>Comment:</span>${res.comment}</p>
+    <hr class="line">
     `;
     ul.appendChild(li);
   });
@@ -27,9 +28,9 @@ const getComments = async () => {
 };
 
 const postComment = async (name, comment) => {
-  const appkey = localStorage.getItem('apiKey');
+  const appKey = localStorage.getItem('apiKey');
   const id = localStorage.getItem('id');
-  const url = `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/${appkey}/comments/`;
+  const url = `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/${appKey}/comments/`;
   const rawResponse = await fetch(url, {
     method: 'POST',
     headers: {
