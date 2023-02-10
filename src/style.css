@@ -256,14 +256,11 @@ button {
 
 .commentslist ul li {
   width: 100%;
-  background-color: aliceblue;
-  color: #201a21;
   text-align: left;
-  padding: 6px 12px;
-  font-size: 12px;
-  font-weight: 600;
-  word-wrap: break-word;
+  font-weight: 400;
   overflow-wrap: break-word;
+  display: flex;
+  justify-content: space-around;
 }
 
 .comments_wrapper form {

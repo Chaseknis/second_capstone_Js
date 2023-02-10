@@ -1,6 +1,7 @@
 import './style.css';
 import { addLikeEvent, getAllLikes } from './modules/likesCounter.js';
 import { createApp } from './modules/movies.js';
+import { postComment, getComments } from './modules/comments.js';
 
 createApp();
 
@@ -51,6 +52,7 @@ const popup = async (id, likes) => {
   document.querySelector('.image-arrow').addEventListener('click', () => {
     document.querySelector('.popup').style.display = 'none';
   });
+  getComments();
   document.querySelector('.movie_name').innerText = results.name;
 };
 
@@ -76,3 +78,10 @@ const insertToDom = async () => {
   addLikeEvent();
 };
 insertToDom();
+
+document.querySelector('.commentsform').addEventListener('submit', (e) => {
+  e.preventDefault();
+  const name = document.querySelector('.commenter').value;
+  const comment = document.querySelector('.commentinput').value;
+  postComment(name, comment);
+});
