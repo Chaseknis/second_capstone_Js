@@ -10,8 +10,8 @@ const populateUI = (data, likes) => {
   let like = likes.filter((like) => like.item_id === String(data.id));
   like = like.length ? like[0].likes : 0;
 
-  const maindiv = document.createElement('div');
-  maindiv.classList.add('maincard');
+  const mainDiv = document.createElement('div');
+  mainDiv.classList.add('main_card');
   const div = document.createElement('div');
   div.classList.add('movie_wrapper');
   div.innerHTML = `
@@ -24,7 +24,7 @@ const populateUI = (data, likes) => {
           </div>
           <div class="likes">
 
-            <div id=${data.id} class="likewrap">
+            <div id=${data.id} class="likes_wrap">
                 <span class="counter">${like}</span>
                 <img class="heart" src="https://img.icons8.com/color/48/ffffff/hearts.png"/>
             </div>
@@ -35,8 +35,8 @@ const populateUI = (data, likes) => {
         <button id=${data.id} class="comment">Comments</button>
     </div>
     `;
-  maindiv.appendChild(div);
-  return maindiv;
+  mainDiv.appendChild(div);
+  return mainDiv;
 };
 
 const popup = async (id, likes) => {
@@ -46,12 +46,12 @@ const popup = async (id, likes) => {
   like = like.length ? like[0].likes : 0;
   results = await results.json();
   document.querySelector('.popup').style.display = 'flex';
-  document.querySelector('.displayimg').setAttribute('src', results.image.medium);
+  document.querySelector('.displaying').setAttribute('src', results.image.medium);
   document.querySelector('.like_counter').innerText = `${like}`;
   document.querySelector('.image-arrow').addEventListener('click', () => {
     document.querySelector('.popup').style.display = 'none';
   });
-  document.querySelector('.moviename').innerText = results.name;
+  document.querySelector('.movie_name').innerText = results.name;
 };
 
 const comment = async () => {

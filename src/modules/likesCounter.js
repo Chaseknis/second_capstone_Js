@@ -21,7 +21,7 @@ const addLike = async (id) => {
 };
 
 const addLikeEvent = () => {
-  const likebtn = document.querySelectorAll('.likewrap');
+  const likebtn = document.querySelectorAll('.likes_wrap');
   likebtn.forEach((btn) => {
     btn.addEventListener('click', () => {
       const id = btn.getAttribute('id');
