@@ -28,24 +28,34 @@ nav a {
   cursor: pointer;
 }
 
+small span {
+  color: aliceblue;
+  font-size: 19px;
+  font-family: 'Rubik Vinyl', cursive;
+  text-align: center;
+}
+
 .logo span {
   font-size: 19px;
   color: rgb(95, 9, 49);
   font-family: 'Rubik Vinyl', cursive;
   cursor: pointer;
 }
+
 .header_container {
   display: flex;
   flex-direction: column;
   padding-top: 70px;
   width: 100%;
 }
+
 h1 {
   color: aliceblue;
   font-size: 39px;
   font-family: 'Rubik Vinyl', cursive;
   text-align: center;
 }
+
 small {
   color: aliceblue;
   font-size: 19px;
@@ -53,12 +63,6 @@ small {
   text-align: center;
 }
 
-small span {
-  color: aliceblue;
-  font-size: 19px;
-  font-family: 'Rubik Vinyl', cursive;
-  text-align: center;
-}
 .moviescontainerdetails span {
   color: white;
 }

@@ -2,7 +2,7 @@ import './style.css';
 import { addLikeEvent, getAllLikes } from './modules/likesCounter.js';
 import { createApp } from './modules/movies.js';
 import { postComment, getComments } from './modules/comments.js';
-import { fetchMovies } from './modules/moviesCounter';
+import { fetchMovies } from './modules/moviesCounter.js';
 
 createApp();
 
@@ -69,16 +69,15 @@ const comment = async () => {
 };
 
 const insertToDom = async () => {
-  let results = await fetchMovies();
+  const results = await fetchMovies();
   const likes = await getAllLikes();
   results.forEach((element) => {
     container.appendChild(populateUI(element, likes));
   });
   comment();
   addLikeEvent();
-  const count = await fetchMovies()
-  console.log(count.length)
-  document.querySelector(".movies_count").innerText=`${count.length}`
+  const count = await fetchMovies();
+  document.querySelector('.movies_count').innerText = `${count.length}`;
 };
 insertToDom();
 

@@ -1,11 +1,11 @@
 const getAllLikes = async () => {
-  try{
+  try {
     const appkey = localStorage.getItem('apikey');
     const url = `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/${appkey}/likes/`;
-    let likes = await fetch(url);
+    const likes = await fetch(url);
     return await likes.json();
-  }catch(error){
-    return []
+  } catch (error) {
+    return [];
   }
 };
 
