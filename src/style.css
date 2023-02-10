@@ -35,6 +35,10 @@ nav a {
   cursor: pointer;
 }
 
+.moviescontainerdetails span {
+  color: white;
+}
+
 nav {
   width: 100%;
   display: flex;
@@ -186,6 +190,10 @@ button {
   box-shadow: rgba(50, 50, 93, 0.25) 0 2px 5px -1px, rgba(0, 0, 0, 0.3) 0 1px 3px -1px;
 }
 
+.pup_up_contents_wrapper {
+  width: 100%;
+}
+
 .displayimg img {
   object-fit: cover;
 }
@@ -283,16 +291,19 @@ textarea {
 }
 
 footer {
+  width: 100%;
   background-color: black;
 }
 
 .footer_contents {
-  padding: 2rem 150px;
+  width: 100%;
+  padding: 2rem 20px;
 }
 
 .footer_contents p {
+  width: 100%;
   color: aliceblue;
-  font-size: 16px;
+  font-size: 12px;
 }
 
 .pop_up_blur_effect {
@@ -396,11 +407,21 @@ footer {
   .semi-popup {
     width: 80%;
     height: 90vh;
+    box-shadow: rgb(155, 43, 110) 3px 3px 6px 0 inset, rgba(122, 31, 31, 0.5) -3px -3px 6px 1px inset;
+  }
+
+  .pop_up_image_wrapper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: #5f0931;
+    padding: 5px;
   }
 
   .displayimg {
     width: 70%;
-    height: 50%;
     object-fit: cover;
   }
 
@@ -411,14 +432,12 @@ footer {
     align-self: flex-end;
   }
 
-  .pop_up_image_wrapper {
+  .pup_up_contents_wrapper {
+    width: 100%;
     display: flex;
+    flex-direction: row;
     align-items: center;
-    flex-direction: column;
-    justify-content: flex-start;
-    background-color: #5f0931;
-    padding: 5px;
-    box-shadow: rgba(50, 50, 93, 0.25) 0 2px 5px -1px, rgba(0, 0, 0, 0.3) 0 1px 3px -1px;
+    gap: 1rem;
   }
 
   .displayimg img {
@@ -431,6 +450,14 @@ footer {
     flex-direction: row;
     justify-content: space-between;
     margin-top: 10px;
+  }
+
+  .commentslist ul {
+    width: 100%;
+    max-height: 400px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
   }
 
   button {

@@ -1,8 +1,15 @@
 import './style.css';
+import { addLikeEvent, getAllLikes } from './modules/likesCounter.js';
+import { createApp } from './modules/movies.js';
+
+createApp();
 
 const container = document.querySelector('.movies_container');
 
-const populateUI = (data) => {
+const populateUI = (data, likes) => {
+  let like = likes.filter((like) => like.item_id === String(data.id));
+  like = like.length ? like[0].likes : 0;
+
   const maindiv = document.createElement('div');
   maindiv.classList.add('maincard');
   const div = document.createElement('div');
@@ -15,8 +22,12 @@ const populateUI = (data) => {
             <p>${data.name}</p>
             <span>HD</span>
           </div>
-          <div id=${data.id} class="likewrap">
-              <img class="heart" src="https://img.icons8.com/color/48/ffffff/hearts.png"/>
+          <div class="likes">
+
+            <div id=${data.id} class="likewrap">
+                <span class="counter">${like}</span>
+                <img class="heart" src="https://img.icons8.com/color/48/ffffff/hearts.png"/>
+            </div>
           </div>
         </div>
     </div>
@@ -28,23 +39,28 @@ const populateUI = (data) => {
   return maindiv;
 };
 
-const popup = async (element) => {
-  const id = element.getAttribute('id');
+const popup = async (id, likes) => {
   let results = await fetch(`https://api.tvmaze.com/shows/${id}`);
+  localStorage.setItem('id', id);
+  let like = likes.filter((like) => like.item_id === String(id));
+  like = like.length ? like[0].likes : 0;
   results = await results.json();
   document.querySelector('.popup').style.display = 'flex';
   document.querySelector('.displayimg').setAttribute('src', results.image.medium);
+  document.querySelector('.like_counter').innerText = `${like}`;
   document.querySelector('.image-arrow').addEventListener('click', () => {
     document.querySelector('.popup').style.display = 'none';
   });
   document.querySelector('.moviename').innerText = results.name;
 };
 
-const comment = () => {
+const comment = async () => {
   const comments = document.querySelectorAll('.buttons_wrapper');
+  const likes = await getAllLikes();
   comments.forEach((element) => {
     element.addEventListener('click', () => {
-      popup(element);
+      const id = element.getAttribute('id');
+      popup(id, likes);
     });
   });
 };
@@ -52,9 +68,11 @@ const comment = () => {
 const insertToDom = async () => {
   let results = await fetch('https://api.tvmaze.com/shows');
   results = await results.json();
+  const likes = await getAllLikes();
   results.forEach((element) => {
-    container.appendChild(populateUI(element));
+    container.appendChild(populateUI(element, likes));
   });
   comment();
+  addLikeEvent();
 };
 insertToDom();
