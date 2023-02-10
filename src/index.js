@@ -2,6 +2,7 @@ import './style.css';
 import { addLikeEvent, getAllLikes } from './modules/likesCounter.js';
 import { createApp } from './modules/movies.js';
 import { postComment, getComments } from './modules/comments.js';
+import { fetchMovies } from './modules/moviesCounter';
 
 createApp();
 
@@ -68,14 +69,16 @@ const comment = async () => {
 };
 
 const insertToDom = async () => {
-  let results = await fetch('https://api.tvmaze.com/shows');
-  results = await results.json();
+  let results = await fetchMovies();
   const likes = await getAllLikes();
   results.forEach((element) => {
     container.appendChild(populateUI(element, likes));
   });
   comment();
   addLikeEvent();
+  const count = await fetchMovies()
+  console.log(count.length)
+  document.querySelector(".movies_count").innerText=`${count.length}`
 };
 insertToDom();
 
