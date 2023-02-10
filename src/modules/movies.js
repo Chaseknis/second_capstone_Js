@@ -1,5 +1,5 @@
 const createApp = async () => {
-  const key = localStorage.getItem('apikey');
+  const key = localStorage.getItem('apiKey');
   if (key === null || key === undefined || key === '') {
     const rawResponse = await fetch('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/', {
       method: 'POST',
@@ -10,7 +10,7 @@ const createApp = async () => {
       // body: JSON.stringify({a: 1, b: 'Textual content'})
     });
     const data = await rawResponse.text();
-    localStorage.setItem('apikey', data);
+    localStorage.setItem('apiKey', data);
   }
 };
 

@@ -220,6 +220,10 @@ button {
 
 .pup_up_contents_wrapper {
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
 }
 
 .displaying img {
@@ -252,6 +256,11 @@ button {
   padding-left: 5px;
 }
 
+.comment img {
+  width: 20px;
+  padding-left: 5px;
+}
+
 .comments_wrapper {
   width: 100%;
   display: flex;
@@ -268,26 +277,33 @@ button {
   color: aliceblue;
 }
 
-.commentslist {
+.comments_list {
   width: 100%;
   display: flex;
   flex-direction: column;
 }
 
-.commentslist ul {
+.comments_list ul {
   width: 100%;
   max-height: 60px;
   display: flex;
   flex-direction: column;
   overflow-y: auto;
+  gap: 5px;
+  list-style: none;
 }
 
-.commentslist ul li {
+.comments_list ul li p {
   width: 100%;
   text-align: left;
+  font-size: 10px;
   font-weight: 400;
   overflow-wrap: break-word;
   display: flex;
+  background-color: aliceblue;
+  color: #201a21;
+  margin: 5px 0;
+  padding: 5px;
   justify-content: space-around;
 }
 
@@ -477,7 +493,7 @@ footer {
     margin-top: 10px;
   }
 
-  .commentslist ul {
+  .comments_list ul {
     width: 100%;
     max-height: 400px;
     display: flex;

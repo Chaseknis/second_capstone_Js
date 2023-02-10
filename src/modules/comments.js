@@ -1,6 +1,6 @@
-const fetchcomments = async () => {
+const fetchComments = async () => {
   const id = localStorage.getItem('id');
-  const appkey = localStorage.getItem('apikey');
+  const appkey = localStorage.getItem('apiKey');
   const url = `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/${appkey}/comments?item_id=${id}`;
   let rawResponse = await fetch(url);
   rawResponse = await rawResponse.json();
@@ -8,10 +8,10 @@ const fetchcomments = async () => {
 };
 
 const getComments = async () => {
-  const commentslist = document.querySelector('.commentslist');
+  const commentsList = document.querySelector('.comments_list');
   const ul = document.createElement('ul');
-  const rawResponse = await fetchcomments();
-  document.querySelector('.commentcounter').innerText = rawResponse.length ? rawResponse.length : 0;
+  const rawResponse = await fetchComments();
+  document.querySelector('.comment_counter').innerText = rawResponse.length ? rawResponse.length : 0;
   rawResponse.forEach((res) => {
     const li = document.createElement('li');
     li.innerHTML = `
@@ -21,13 +21,13 @@ const getComments = async () => {
     `;
     ul.appendChild(li);
   });
-  commentslist.innerHTML = '';
-  commentslist.append(ul);
+  commentsList.innerHTML = '';
+  commentsList.append(ul);
   return rawResponse;
 };
 
 const postComment = async (name, comment) => {
-  const appkey = localStorage.getItem('apikey');
+  const appkey = localStorage.getItem('apiKey');
   const id = localStorage.getItem('id');
   const url = `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/${appkey}/comments/`;
   const rawResponse = await fetch(url, {
@@ -48,8 +48,4 @@ const postComment = async (name, comment) => {
   return rawResponse;
 };
 
-module.exports = {
-  postComment,
-  getComments,
-  fetchcomments,
-};
+module.exports = { postComment, getComments, fetchComments };

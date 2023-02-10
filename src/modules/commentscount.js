@@ -1,10 +1,8 @@
-import { fetchcomments } from './comments.js';
+import { fetchComments } from './comments.js';
 
-const commentcount = async () => {
-  const comments = await fetchcomments();
+const commentCounter = async () => {
+  const comments = await fetchComments();
   return comments.length;
 };
 
-module.exports = {
-  commentcount,
-};
+module.exports = { commentCounter };
