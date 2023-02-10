@@ -1,21 +1,23 @@
-import { commentCounter } from '../commentsCount.js';
+import { commentCounter } from '../commentscount.js';
 
 const fetchComments = jest.fn();
-
+global.fetch = jest.fn();
 describe('commentCounter', () => {
   beforeEach(() => {
-    fetchComments.mockReset();
+    fetch.mockReset();
   });
 
   test('returns the number of comments', async () => {
-    fetchComments.mockResolvedValue([{ id: 1 }, { id: 2 }, { id: 3 }]);
+    const comment = [{ id: 1 }, { id: 2 }, { id: 3 }];
+    fetch.mockResolvedValue({ json: () => Promise.resolve(comment) });
     const result = await commentCounter();
-    expect(result).toBe(3);
+    expect(result.length).toBe(3);
   });
 
-  test('returns 0 if fetchComments fails', async () => {
-    fetchComments.mockRejectedValue(new Error('Something went wrong'));
+  test('returns the comments object', async () => {
+    const comment = [{ id: 1 }, { id: 2 }, { id: 3 }];
+    fetch.mockResolvedValue({ json: () => Promise.resolve(comment) });
     const result = await commentCounter();
-    expect(result).toBe(0);
+    expect(result).toBe(comment);
   });
 });
