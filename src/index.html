@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>8Movies</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik+Vinyl&display=swap" rel="stylesheet">
+</head>
+<body>
+  
+  <header>
+    <nav>
+      <a href="#" class="logo">8Mo<span>Vies</span></a>
+      <ul>
+        <li><a href="">Movies</a></li>
+        <li><a href="">Tv Shows</a></li>
+        <li><a href="">Animation</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="popup">
+    <div class="pop_up_blur_effect"></div>
+      <div class="semi-popup">
+        <img class="image-arrow" src="https://img.icons8.com/material-rounded/24/null/close-window.png"/>
+        <div class="pup_up_contents_wrapper">
+          <div class="pop_up_image_wrapper">
+            <img class="displaying" src="https://static.tvmaze.com/uploads/images/medium_portrait/213/534017.jpg"/>
+
+            <div class="movies_container_details">
+              <p class="movie_name"></p>
+              <div class="likes">
+                <div class="likes_wrap">
+                  <span class="like_counter"></span>
+
+                  <img class="heart" src="https://img.icons8.com/color/48/ffffff/hearts.png"/>
+                  <div class="comment">
+                    <p class="comment_counter"></p> 
+                    <img src="https://img.icons8.com/ios-glyphs/25/null/speech-bubble--v1.png"/>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="comments_wrapper">
+            <p>Comments</p>
+            <div class="comments_list">
+
+            </div>
+
+            <form action="POST" class="comments_form">
+              <input type="text" placeholder="Name" class="commenter">
+              <textarea type="text" placeholder="Comment" class="comment_input" name="message" id="comment" cols="20" rows="10"></textarea>
+        
+              <div class="buttons_wrapper">
+                <button type="submit" value="add comment">Add Comment</button>
+              </div>
+            </form>
+
+          </div>
+        </div>
+      </div> 
+  </div>
+
+  <main>
+    <div class="header_container">
+      <h1>8Movies</h1>
+      <small>(<span class="movies_count"></span> Movies)</small>
+    </div>
+
+    <section class="movies_container">
+
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="footer_contents">
+      <p>Created By Microverse Under CC license</p>
+    </div>
+  </footer>
+    
+</body>
+</html>
