@@ -10,6 +10,7 @@ const fetchComments = async () => {
 const getComments = async () => {
   const commentsList = document.querySelector('.comments_list');
   const ul = document.createElement('ul');
+  commentsList.innerHTML = '';
   const rawResponse = await fetchComments();
   document.querySelector('.comment_counter').innerText = rawResponse.length ? rawResponse.length : 0;
   rawResponse.forEach((res) => {
