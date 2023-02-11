@@ -172,8 +172,8 @@ To run tests, run the following command:
 👤 **Luzinda Douglas**
 
 - GitHub: [@LDouglasOT](https://github.com/LDouglasOT)
-- Twitter: [@Author 2]()
-- LinkedIn: [Author 2]()
+- Twitter: [@dLuzinda](https://twitter.com/dLuzinda)
+- LinkedIn: [Luzinda Douglas](https://www.linkedin.com/in/luzinda-douglas-69bb811b8/)
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
