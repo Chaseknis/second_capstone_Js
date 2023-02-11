@@ -1,5 +1,5 @@
-import countAllLikes from "../Likescount";
-import { spyOn } from 'jest-mock';
+import countAllLikes from '../Likescount.js';
+
 global.fetch = jest.fn();
 
 describe('countAllLikes', () => {
