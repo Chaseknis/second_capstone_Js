@@ -7,7 +7,6 @@ const createApp = async () => {
         Accept: 'application/json',
         'Content-Type': 'application/json',
       },
-      // body: JSON.stringify({a: 1, b: 'Textual content'})
     });
     const data = await rawResponse.text();
     localStorage.setItem('apiKey', data);

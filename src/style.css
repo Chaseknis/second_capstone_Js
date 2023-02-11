@@ -351,7 +351,16 @@ button {
   flex-direction: column;
   overflow-y: auto;
   gap: 5px;
+  padding-top: 4rem;
   list-style: none;
+}
+
+.comments_list ul li {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
 }
 
 .comments_wrapper form {
@@ -395,6 +404,14 @@ footer {
   z-index: -1;
   top: 0;
   backdrop-filter: blur(5px);
+}
+
+.line {
+  width: 80%;
+  background-color: #5f0931;
+  border: 1px solid #5f0931;
+  margin: 1rem 0;
+  align-self: center;
 }
 
 @media only screen and (min-width: 768px) {
@@ -541,6 +558,7 @@ footer {
 
   .comments_list ul {
     width: 100%;
+    padding-top: 8rem;
     max-height: 400px;
     display: flex;
     flex-direction: column;
