@@ -1,5 +1,5 @@
-import countAllLikes from "../LikesCount";
 import { spyOn } from 'jest-mock';
+import countAllLikes from '../Likescount.js';
 
 const fetchSpy = spyOn(global, 'fetch');
 
@@ -22,5 +22,3 @@ describe('countAllLikes', () => {
     expect(result).toEqual(likes);
   });
 });
-
-  

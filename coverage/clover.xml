@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1676124689171" clover="3.2.0">
-  <project timestamp="1676124689171" name="All files">
+<coverage generated="1676125103434" clover="3.2.0">
+  <project timestamp="1676125103434" name="All files">
     <metrics statements="38" coveredstatements="20" conditionals="2" coveredconditionals="0" methods="6" coveredmethods="3" elements="46" coveredelements="23" complexity="0" loc="38" ncloc="38" packages="1" files="3" classes="3"/>
     <file name="comments.js" path="/Users/chaseknis/Documents/Module 2/second_capstone_Js/src/modules/comments.js">
       <metrics statements="28" coveredstatements="10" conditionals="2" coveredconditionals="0" methods="4" coveredmethods="1"/>
