@@ -185,6 +185,7 @@ button {
   width: 100%;
   justify-content: center;
   top: 40px;
+  overflow: auto;
 }
 
 .semi-popup {

@@ -19,4 +19,11 @@ describe('fetchMovies', () => {
     const result = await fetchMovies();
     expect(result).toEqual([]);
   });
+
+  test('returns an empty array if there are 0 movies', async () => {
+    const movieData = [];
+    fetch.mockResolvedValue({ json: () => Promise.resolve(movieData) });
+    const result = await fetchMovies();
+    expect(result).toEqual([]);
+  });
 });

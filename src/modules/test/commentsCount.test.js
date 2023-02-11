@@ -19,4 +19,10 @@ describe('commentCounter', () => {
     const result = await commentCounter();
     expect(result).toBe(comment);
   });
+  test('returns an empty array if there are 0 comments', async () => {
+    const comment = [];
+    fetch.mockResolvedValue({ json: () => Promise.resolve(comment) });
+    const result = await commentCounter();
+    expect(result).toEqual([]);
+  });
 });

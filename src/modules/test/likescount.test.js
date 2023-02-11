@@ -20,4 +20,11 @@ describe('countAllLikes', () => {
     const result = await countAllLikes();
     expect(result).toBe(3);
   });
+
+  test('returns 0 if there are 0 likes', async () => {
+    const likes = [];
+    fetch.mockResolvedValue({ json: () => Promise.resolve(likes) });
+    const result = await countAllLikes();
+    expect(result).toBe(0);
+  });
 });
