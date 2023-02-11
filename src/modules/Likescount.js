@@ -5,6 +5,4 @@ const countAllLikes = async () => {
   return likes.length;
 };
 
-module.exports = {
-  countAllLikes,
-};
+export default countAllLikes;
