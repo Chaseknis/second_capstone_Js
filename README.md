@@ -83,6 +83,10 @@
 
 - [Live Demo Link](https://chaseknis.github.io/second_capstone_Js/dist/)
 
+<img width="1680" alt="Screenshot 2023-02-11 at 10 14 17" src="https://user-images.githubusercontent.com/97366651/218248050-d2d3ddc5-d5b6-46a8-a5a6-31dc2052ee45.png">
+
+<img width="387" alt="Screenshot 2023-02-11 at 10 14 48" src="https://user-images.githubusercontent.com/97366651/218248053-609a4543-d30e-46f8-9893-1c160750c157.png">
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 💻 Getting Started <a name="getting-started"></a>
