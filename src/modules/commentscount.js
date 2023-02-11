@@ -5,4 +5,4 @@ const commentCounter = async () => {
   return comments;
 };
 
-module.exports = { commentCounter };
+export default commentCounter;

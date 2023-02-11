@@ -204,6 +204,66 @@ button {
   align-self: flex-end;
 }
 
+.movies_container_details {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.footer_contents p {
+  width: 100%;
+  color: aliceblue;
+  font-size: 12px;
+}
+
+.movies_container_details p {
+  color: aliceblue;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.comments_wrapper p {
+  font-size: 20px;
+  font-weight: 600;
+  color: aliceblue;
+}
+
+.comments_list ul li p {
+  width: 100%;
+  text-align: left;
+  font-size: 10px;
+  font-weight: 400;
+  overflow-wrap: break-word;
+  display: flex;
+  background-color: aliceblue;
+  color: #201a21;
+  margin: 5px 0;
+  padding: 5px;
+  justify-content: space-around;
+}
+
+.likes_wrap {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.likes_wrap .comment p {
+  border: none;
+  color: white;
+  padding-left: 5px;
+  font-size: 10px;
+}
+
+.likes_wrap span {
+  border: none;
+  color: white;
+  padding-left: 5px;
+}
+
 .pop_up_image_wrapper {
   display: flex;
   align-items: center;
@@ -238,13 +298,6 @@ button {
   gap: 5px;
 }
 
-.likes_wrap .comment p {
-  border: none;
-  color: white;
-  padding-left: 5px;
-  font-size: 10px;
-}
-
 .pup_up_contents_wrapper {
   width: 100%;
   display: flex;
@@ -257,39 +310,12 @@ button {
   object-fit: cover;
 }
 
-.movies_container_details {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin-top: 10px;
-}
-
-.movies_container_details p {
-  color: aliceblue;
-  font-size: 12px;
-  font-weight: 600;
-}
-
 .likes {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
   justify-content: space-between;
   gap: 5px;
-}
-
-.likes_wrap {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.likes_wrap span {
-  border: none;
-  color: white;
-  padding-left: 5px;
 }
 
 .likes .heart {
@@ -312,12 +338,6 @@ button {
   padding-top: 0.5rem;
 }
 
-.comments_wrapper p {
-  font-size: 20px;
-  font-weight: 600;
-  color: aliceblue;
-}
-
 .comments_list {
   width: 100%;
   display: flex;
@@ -332,20 +352,6 @@ button {
   overflow-y: auto;
   gap: 5px;
   list-style: none;
-}
-
-.comments_list ul li p {
-  width: 100%;
-  text-align: left;
-  font-size: 10px;
-  font-weight: 400;
-  overflow-wrap: break-word;
-  display: flex;
-  background-color: aliceblue;
-  color: #201a21;
-  margin: 5px 0;
-  padding: 5px;
-  justify-content: space-around;
 }
 
 .comments_wrapper form {
@@ -380,12 +386,6 @@ footer {
 .footer_contents {
   width: 100%;
   padding: 2rem 20px;
-}
-
-.footer_contents p {
-  width: 100%;
-  color: aliceblue;
-  font-size: 12px;
 }
 
 .pop_up_blur_effect {
@@ -533,6 +533,7 @@ footer {
     justify-content: space-between;
     margin-top: 10px;
   }
+
   .comments_list {
     width: 100%;
     scroll-behavior: auto;
@@ -553,8 +554,6 @@ footer {
     margin: 2rem 0;
     align-self: center;
   }
-  
-  
 
   .comments_list ul li {
     width: 100%;
@@ -562,7 +561,6 @@ footer {
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-
   }
 
   button {

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1676099456715" clover="3.2.0">
-  <project timestamp="1676099456715" name="All files">
-    <metrics statements="38" coveredstatements="21" conditionals="2" coveredconditionals="0" methods="6" coveredmethods="3" elements="46" coveredelements="24" complexity="0" loc="38" ncloc="38" packages="1" files="3" classes="3"/>
+<coverage generated="1676100522852" clover="3.2.0">
+  <project timestamp="1676100522852" name="All files">
+    <metrics statements="37" coveredstatements="20" conditionals="2" coveredconditionals="0" methods="6" coveredmethods="3" elements="45" coveredelements="23" complexity="0" loc="37" ncloc="37" packages="1" files="3" classes="3"/>
     <file name="comments.js" path="/Users/chaseknis/Documents/Module 2/second_capstone_Js/src/modules/comments.js">
       <metrics statements="27" coveredstatements="10" conditionals="2" coveredconditionals="0" methods="4" coveredmethods="1"/>
       <line num="1" count="1" type="stmt"/>
@@ -33,11 +33,10 @@
       <line num="52" count="1" type="stmt"/>
     </file>
     <file name="commentscount.js" path="/Users/chaseknis/Documents/Module 2/second_capstone_Js/src/modules/commentscount.js">
-      <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <line num="3" count="1" type="stmt"/>
       <line num="4" count="2" type="stmt"/>
       <line num="5" count="2" type="stmt"/>
-      <line num="8" count="1" type="stmt"/>
     </file>
     <file name="moviesCounter.js" path="/Users/chaseknis/Documents/Module 2/second_capstone_Js/src/modules/moviesCounter.js">
       <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>

@@ -1,6 +1,5 @@
-import { commentCounter } from '../commentscount.js';
+import commentCounter from '../commentscount.js';
 
-const fetchComments = jest.fn();
 global.fetch = jest.fn();
 describe('commentCounter', () => {
   beforeEach(() => {
